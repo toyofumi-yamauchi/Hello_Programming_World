@@ -32,7 +32,7 @@ ax2_1 = fig2.add_subplot(2,1,1)
 line_xy = ax2_1.plot(x,y,'r',label = 'y = x^2')
 ax2_1.set_title('Sample figure 2')
 ax2_1.set_xlabel('x')
-ax2_1.set_ylabel('y')]
+ax2_1.set_ylabel('y')
 #ax2_1.set_xlim(min,max)
 ax2_1.grid()
 ax2_2 = fig2.add_subplot(2,1,2)
