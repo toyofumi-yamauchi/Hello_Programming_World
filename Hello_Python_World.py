@@ -25,6 +25,7 @@ line1_ab = ax1.plot(a,b,'b',label = 'b = 2*a')
 ax1.set_title('Sample figure 1')
 ax1.set_xlabel('x,a')
 ax1.set_ylabel('y,b')
+ax1.ticklabel_format(style="sci",axis="both",scilimits=(0,0))
 ax1.grid()
 # figure 2
 fig2 = plt.figure(2)
