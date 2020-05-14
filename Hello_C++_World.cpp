@@ -12,13 +12,14 @@ int y0 = 0;
 int size = 3;
 int p;
 
-#define number  100
-struct Test{
-    int     i;
-    double  a;
-    double  *b;
+struct Test{    // 以下の変数を含むTestという型を宣言
+    int     i;  // 変数1
+    double  a;  // 変数2
+    double  b;  // 変数3
+    double  c;  // 変数4
 };
-Test test;
+Test test; // ここで変数を宣言している
+// これ以降test.変数でその変数を扱うことができる
 
 #define m_e 9.1e-31
 #define q   1.6e-19
@@ -62,14 +63,17 @@ int main()
     cout << "y[2]   = " << y[size-1] << endl;
     cout << "*point = " << *point << "\n" << endl;
 
-    test.i  = number;
-    test.a  = 1;
-    test.b  = new double[test.i];
-    double *b = test.b;
+    Test test[] = {
+        {1,1,1,1},
+        {1,2,3,5},
+        {2,3,9,10},
+        {3,4,12,15}
+    };
     cout << "test.i = " << test.i << endl;
     cout << "test.a = " << test.a << endl;
     cout << "test.b = " << test.b << endl;
-    cout << "*b = " << *b << "\n" << endl;
+    cout << "test.c = " << test.c << endl;
+    //cout << "*b = " << *b << "\n" << endl;
 
     Species electron;
 
