@@ -5,6 +5,10 @@ https://qiita.com/RinGoku/items/9a0e28ddac4663cd5b03
 
 import matplotlib.pyplot as plt
 import numpy as np
+import random as rand
+
+r = rand.random()
+print(r)
 
 x = np.arange(0,10.1,0.1)
 y = x**2
