@@ -1,5 +1,6 @@
 # the goal 
 # plotting the motion of charged particle under static E- and B-fields 
+# last update: June 7, 2020
 
 import numpy as np
 import matplotlib.pyplot as plt
@@ -14,14 +15,14 @@ AMU = 1.66054e-27   # 1 [amu] in [kg]
 q_e = -1.602e-19    # electron charge [C]
 m_e = 9.11e-31      # electron mass [kg]
 q_i = 1.602e-19     # ion charge [C]
-#m_i = 40*AMU    # ion mass [kg]
+m_i = 40*AMU        # ion mass [kg]
 m_i = m_e           # positron mass [kg]
 q = [q_e, q_i]
 m = [m_e, m_i]
 
 # field information
 E_x = 100           # E-field in x [V/m]
-E_y = 0           # E-field in y [V/m]
+E_y = 0             # E-field in y [V/m]
 E_z = 0             # E-field in z [V/m]
 B_x = 0             # B-field in x [V/m]
 B_y = 0             # B-field in y [V/m]
@@ -105,7 +106,6 @@ ax_3D.ticklabel_format(style="sci",axis="z",scilimits=(0,0))
 ax_3D.set_xlim(mid_x - max_range, mid_x + max_range)
 ax_3D.set_ylim(mid_y - max_range, mid_y + max_range)
 ax_3D.set_zlim(mid_z - max_range, mid_z + max_range)
-
 
 # 2D plotting
 fig_2D = plt.figure(2)
