@@ -8,7 +8,7 @@ from mpl_toolkits.mplot3d import Axes3D
 
 # time setting
 dt  = 1e-10         # time step [s]
-NUM_TS = 150        # the # of time step
+NUM_TS = 1430000        # the # of time step
 
 # particle information
 AMU = 1.66054e-27   # 1 [amu] in [kg]
@@ -16,7 +16,7 @@ q_e = -1.602e-19    # electron charge [C]
 m_e = 9.11e-31      # electron mass [kg]
 q_i = 1.602e-19     # ion charge [C]
 m_i = 40*AMU        # ion mass [kg]
-m_i = m_e           # positron mass [kg]
+#m_i = 2*m_e           # positron mass [kg]
 q = [q_e, q_i]
 m = [m_e, m_i]
 
