@@ -10,6 +10,14 @@ import random as rand
 r = rand.random()
 print(r)
 
+# グラフとして描画するデータ
+x = np.array([1,2,3,4])
+y = np.array([2,3,4,5])
+
+# グラフを描画
+plt.plot(x, y)
+plt.show()
+
 x = np.arange(0,10.1,0.1)
 y = x**2
 ab_size = 101
@@ -31,6 +39,7 @@ ax1.set_xlabel('x,a')
 ax1.set_ylabel('y,b')
 ax1.ticklabel_format(style="sci",axis="both",scilimits=(0,0))
 ax1.grid()
+
 # figure 2
 fig2 = plt.figure(2)
 ax2_1 = fig2.add_subplot(2,1,1)

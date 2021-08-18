@@ -69,10 +69,10 @@ int main()
         {2,3,9,10},
         {3,4,12,15}
     };
-    cout << "test.i = " << test.i << endl;
-    cout << "test.a = " << test.a << endl;
-    cout << "test.b = " << test.b << endl;
-    cout << "test.c = " << test.c << endl;
+    //cout << "test.i = " << test.i << endl;
+    //cout << "test.a = " << test.a << endl;
+    //cout << "test.b = " << test.b << endl;
+    //cout << "test.c = " << test.c << endl;
     //cout << "*b = " << *b << "\n" << endl;
 
     Species electron;
