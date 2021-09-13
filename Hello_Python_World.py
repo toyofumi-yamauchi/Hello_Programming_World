@@ -3,7 +3,14 @@
 https://qiita.com/RinGoku/items/9a0e28ddac4663cd5b03
 '''
 
+#import matplotlib.pyplot as plt
+# 上記のやり方でsegmentation faultが出てplotが表示されなくなっていたので
+# https://qiita.com/sage-git/items/aa3d2acd93cded4be2e8
+# を参考に下記に変更したところ解決
+import matplotlib as mpl
+mpl.use('TkAgg')
 import matplotlib.pyplot as plt
+
 import numpy as np
 import random as rand
 
