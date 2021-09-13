@@ -2,12 +2,19 @@
 # plotting the motion of charged particle under static E- and B-fields 
 # last update: June 7, 2020
 
-import numpy as np
+#import matplotlib.pyplot as plt
+# 上記のやり方でsegmentation faultが出てplotが表示されなくなっていたので
+# https://qiita.com/sage-git/items/aa3d2acd93cded4be2e8
+# を参考に下記に変更したところ解決
+import matplotlib as mpl
+mpl.use('TkAgg')
 import matplotlib.pyplot as plt
+
+import numpy as np
 from mpl_toolkits.mplot3d import Axes3D
 
 # time setting
-dt  = 1e-10         # time step [s]
+dt  = 1e-9         # time step [s]
 NUM_TS = 1430000        # the # of time step
 
 # particle information
@@ -44,7 +51,7 @@ v = np.zeros((2,NUM_TS))
 w = np.zeros((2,NUM_TS))
 x[:,0] = x_0
 y[:,0] = y_0
-z[:.0] = z_0
+z[:,0] = z_0
 u[:,0] = u_0
 v[:,0] = v_0
 w[:,0] = w_0
@@ -99,7 +106,7 @@ ax_3D.set_xlabel('x [m]')
 ax_3D.set_ylabel('y [m]')
 ax_3D.set_zlabel('z [m]')
 ax_3D.legend()
-ax_3D.axis('equal')
+ax_3D.axis('auto')
 ax_3D.ticklabel_format(style="sci",axis="x",scilimits=(0,0))
 ax_3D.ticklabel_format(style="sci",axis="y",scilimits=(0,0))
 ax_3D.ticklabel_format(style="sci",axis="z",scilimits=(0,0))
@@ -117,7 +124,7 @@ ax_xy.set_title('XY plane')
 ax_xy.set_xlabel('x [m]')
 ax_xy.set_ylabel('y [m]')
 ax_xy.legend()
-ax_xy.axis('equal')
+ax_xy.axis('auto')
 ax_xy.ticklabel_format(style="sci",axis="x",scilimits=(0,0))
 ax_xy.ticklabel_format(style="sci",axis="y",scilimits=(0,0))
 ax_xy.set_xlim(mid_x - max_range, mid_x + max_range)
