@@ -17,30 +17,56 @@
 % TeXはVSCodeとLaTeX Workshopで書こう(画像付き)
 % https://kajindowsxp.com/texworkshop/
 
-
-\documentclass{ltjsarticle}
+\documentclass[letterpaper,oneside,12pt]{ltjsarticle}
 %\usepackage[utf8]{inputenc}
 
 \usepackage[sorting=none]{biblatex}
-%\addbibresource{reference.bib}
+\addbibresource{reference.bib}
 \usepackage{indentfirst}
 \usepackage{xcolor}
 
 \usepackage{textcomp}
 \usepackage{gensymb}
 
-%\usepackage[dvipdfmx]{graphicx}
-\usepackage{subfigure}
+% LaTeXで画像が表示されなくなった
+% https://takahero2016.hatenablog.com/entry/2020/12/14/180000
+% subfigureの間のスペースを縮める
+% https://tex.stackexchange.com/questions/42968/reduction-of-space-between-two-sub-figures
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+% これがあるとsubfigure環境が逆に構築できない
+%\usepackage{subfigure}
+%\usepackage{subfig}
+
+% 【基本】LuaLaTeXのPDFを便利にしよう　～hyperrefパッケージほか～
+% https://lualatexlab.blog.fc2.com/blog-entry-43.html
+%\usepackage{bookmark}
+%\usepackage{xurl}
+\usepackage{hyperref}
+\usepackage{xcolor}
+%\hypersetup{unicode,bookmarksnumbered=true,linkbordercolor=red,hidelinks,final}
+
 \usepackage{here}
 
 \usepackage{amsmath}
 
 \usepackage{appendix}
 
+% Add date, month or year to your LaTeX document
+% https://statatexblog.com/2021/10/18/add-date-month-or-year-to-your-latex-document/
+\usepackage{datetime}
+\newdateformat{monthdayyeardate}{
+    \monthname[\THEMONTH] \THEDAY, \THEYEAR}
+
+% Latexで図番号だけを「図1.1」ではなく「Fig. 1.1」と英語で表記したいのですが、どのようにすればよろしいのでしょうか。
+% https://okwave.jp/qa/q1186376.html
+\renewcommand{\figurename}{Figure }
+\renewcommand{\tablename}{Table }
 
 \title{Title}
 \author{Toyofumi Yamauchi}
-\date{Month DD, YYYY}
+\date{\monthdayyeardate\today}
 
 
 \begin{document}
