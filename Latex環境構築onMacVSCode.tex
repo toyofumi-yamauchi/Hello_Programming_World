@@ -52,6 +52,9 @@
 \usepackage{here}
 
 \usepackage{amsmath}
+% LaTeXできれいな丸囲み文字を表示する方法
+% https://livingdead0812.hatenablog.com/entry/20161005/1475654232
+\newcommand{\ctext}[1]{\raise0.2ex\hbox{\textcircled{\scriptsize{#1}}}}
 
 % Latexの数式を映えさせる
 % https://qiita.com/t_kemmochi/items/483b8fcdb5db8d1f5d5e#tcboxmath-の基本的な使い方
@@ -81,6 +84,11 @@
 
 \begin{document}
 \maketitle
+
+$\ctext{1}$
+$\ctext{11}$
+$\ctext{111}$
+$\ctext{a}$
 
 This is a test document.
 
